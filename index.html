@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobileCBT - Affordable, Accessible Testing</title>
+    <link rel="stylesheet" href="CSS/style.css">
+   
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">MobileCBT</a>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- <section class="hero">
+        <div class="container">
+            <div class="hero-image-container">
+                -- Add a hero image here 
+                <img src="images/jamb-cbt.jpg" alt="Hero Image" class="hero-image">
+            </div>
+            <h1>Affordable, Accessible, and<br>Secure Testing for Every School</h1>
+            <p>Transform your school's examination process with MobileCBT</p>
+           <button onclick="openModal('contact-modal')" class="cta-button">Get Started</button>
+        </div>
+    </section> -->
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-image-container">
+                <!-- Image Slider -->
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="images/jamb-cbt.jpg" alt="Hero Image 1" class="hero-image">
+                        </div>
+                        <div class="slide">
+                            <img src="images/jamb-cbt2.jpg" alt="Hero Image 2" class="hero-image">
+                        </div>
+                        <div class="slide">
+                            <img src="images/jamb-cbt3.jpg" alt="Hero Image 3" class="hero-image">
+                        </div>
+                    </div>
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+            <h1>Affordable, Accessible, and<br>Secure Testing for Every School</h1>
+            <p>Transform your school's examination process with MobileCBT</p>
+            <button onclick="openModal('contact-modal')" class="cta-button">Get Started</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Mobile-First Solution</h3>
+                    <p>Conduct exams on smartphones, tablets, or shared devices without expensive computer labs</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Works Offline</h3>
+                    <p>Operates on local wireless network with no internet requirement</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Advanced Security</h3>
+                    <p>Built-in anti-cheating measures including airplane mode enforcement and QR code login</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="workflow-grid">
+                <div class="workflow-item">
+                    <h3>Web Application</h3>
+                    <p>Manage questions, student data, and results through our comprehensive web platform that works offline</p>
+                </div>
+                <div class="workflow-item">
+                    <h3>Mobile Application</h3>
+                    <p>Students take exams using secure mobile apps with anti-cheating features and automatic progress saving</p>
+                </div>
+                <div class="workflow-item">
+                    <h3>Local Network</h3>
+                    <p>All devices connect to the same local network for seamless synchronization and real-time management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing</h2>
+            <div class="pricing-info">
+                <p>We offer flexible pricing options tailored to your school's needs:</p>
+                <p>Currently charging 80% of traditional paper-based testing costs</p>
+                <p>Choose between per-student packages or term/session-based pricing</p>
+                <button onclick="openModal('pricing-modal')" class="cta-button">Contact for Pricing</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Add Modal for Contact Form -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('contact-modal')">&times;</span>
+            <h2>Get Started with MobileCBT</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">School Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+     <!-- Add Modal for Pricing Inquiry -->
+     <div id="pricing-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('pricing-modal')">&times;</span>
+            <h2>Request Pricing Information</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="school-name">School Name</label>
+                    <input type="text" id="school-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-count">Number of Students</label>
+                    <input type="number" id="student-count" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Phone</label>
+                    <input type="tel" id="contact-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="additional-info">Additional Information</label>
+                    <textarea id="additional-info"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Request Pricing</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>Plot 160, AJ Ahmadu Plaza</li>
+                        <li>Lafia, Nasarawa State</li>
+                        <li>+2349031514346</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Current Partners</h3>
+                    <ul class="footer-links">
+                        <li>Yumaco International School</li>
+                        <li>Sandaji College</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 MobileCBT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            // Here you would typically send the form data to your server
+            alert('Thank you for your interest! We will contact you shortly.');
+            closeModal(event.target.closest('.modal').id);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+
+
+        const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const totalSlides = slides.length;
+        currentIndex = (index + totalSlides) % totalSlides; // Handles wrap-around
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Automatic slide change every 5 seconds
+    setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
